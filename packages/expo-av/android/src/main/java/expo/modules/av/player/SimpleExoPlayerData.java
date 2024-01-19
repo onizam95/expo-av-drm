@@ -75,7 +75,7 @@ class SimpleExoPlayerData extends PlayerData
     super(avModule, uri, requestHeaders);
     mReactContext = context;
     mOverridingExtension = overridingExtension;
-    if(requestHeaders.containsKey(PROP_DRM)){
+    if(requestHeaders != null && requestHeaders.containsKey(PROP_DRM)){
       this.setDRM((Map<String, Object>) requestHeaders.get(PROP_DRM));
     }
 
